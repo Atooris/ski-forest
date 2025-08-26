@@ -1,0 +1,192 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease; // animacja tła przy zmianach
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; // logo po lewej, menu po prawej
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $green-dark; // ciemny kolor logo
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $green; // zielony przy hover
+    }
+  }
+
+  .nav {
+    .nav-list {
+      display: flex;
+      align-items: center; 
+      list-style: none;
+
+      li {
+        position: relative;
+        &:not(:last-child){
+          border-right: 1px solid $green-dark;
+        }
+        padding: 10px 0px;
+        &:hover{
+          a{
+            color: white;
+          }
+          background: $green;
+        }
+
+        a {
+          text-decoration: none;
+          color: $green-dark;
+          font-weight: 500;
+
+          padding: 0 16px;
+        }
+      }
+
+      .item-dropdown {
+        cursor: pointer;
+
+        .dropdown {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          padding: 0.5rem 0;
+          display: none;
+          flex-direction: column;
+          align-items: flex-start; 
+          min-width: 250px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease;
+          
+
+          li {
+            padding: 0.5rem 1rem;
+            list-style: none;
+            border: 0;
+            &:not(:last-child){
+              border-bottom: 1px solid $green-dark;
+            }
+        
+
+            a{
+              display: block;
+              color: black;
+            }
+            
+          }
+          li:hover{
+              a{
+                background: $green;
+              color: white;
+              }
+            }
+        }
+
+        &:hover .dropdown {
+          display: flex;
+        }
+
+        &.active{
+           .dropdown { 
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  .toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+    }
+  }
+
+  // RESPONSYWNOŚĆ
+  @media (max-width: 778px) {
+    .nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: $white; // tło menu w mobile białe
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .nav-list {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+        align-items: flex-start;
+        li{
+          border: 0 !important;
+          border-bottom: 1px solid black !important;
+          padding: 10px 10px;
+          width: 100%;
+          &:hover{
+          a{
+              color: $green-dark;
+            }
+            background: none;
+          }
+        }
+
+        .item-dropdown {
+          width: 100%;
+          &.active{
+            padding-top: 0px;
+            padding-bottom: 0px;
+            a{              
+              padding-top: 10px;
+              padding-bottom: 10px;
+            }
+          }
+          .dropdown {
+            width: 100%;
+            position: static;
+            display: none;
+            box-shadow: none;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+          }
+
+          &.active .dropdown {
+            display: flex;
+            padding: 0px;
+            li{
+              padding: 0px;
+              &:last-child{
+                padding-bottom: 0px !important;
+                border-bottom: 0px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .nav.active {
+      display: flex;
+    }
+
+    .toggle {
+      display: block;
+    }
+  }
+}
