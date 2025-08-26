@@ -1,0 +1,54 @@
+.contact-box {
+  background: $green;
+  color: $white;
+  padding: 3rem 1rem;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    flex: 1 1 45%;
+
+    &.text {
+      h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+
+    &.action {
+      text-align: right;
+
+      h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  // Responsywność
+  @media (max-width: 768px) {
+    .wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+    .col.action {
+      text-align: center;
+    }
+  }
+}

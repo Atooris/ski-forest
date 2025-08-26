@@ -12,5 +12,21 @@
         &:hover {
           background: rgbaify($green, 0.8);
         }
+
+        &.phone {
+            display: inline-block;
+            background: $beige;
+            color: $green-dark;
+            padding: 1rem 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s;
+
+            &:hover {
+            background-color: rgbaify($beige, 0.8);
+            }
+        }
       }
     }
