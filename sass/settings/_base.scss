@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: "Sofia Sans", sans-serif;
+    font-family: "Noto Sans", "sans-serif";
 }
 
 html {
@@ -12,4 +12,16 @@ html {
 
 body {
     margin: 0;
+}
+
+.container {
+    max-width: 1260px;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+
+    &.small{
+        max-width: 1080px;
+        padding: 0 60px;
+    }
 }

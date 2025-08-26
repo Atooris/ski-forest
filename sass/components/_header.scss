@@ -1,8 +1,12 @@
 .header {
-  position: sticky;
+  position: fixed;   // przyklejony do góry
   top: 0;
+  left: 0;
+  width: 100%;       // pełna szerokość
   z-index: 1000;
-  transition: background 0.3s ease; // animacja tła przy zmianach
+  background: $white; // tło, żeby treść pod spodem nie prześwitywała
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); // delikatny cień
+  transition: background 0.3s ease;
 
   .container {
     max-width: 1200px;
@@ -10,7 +14,7 @@
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between; // logo po lewej, menu po prawej
+    justify-content: space-between;
   }
 
   .logo a {
@@ -70,6 +74,7 @@
           
 
           li {
+            background-color: white;
             padding: 0.5rem 1rem;
             list-style: none;
             border: 0;
@@ -143,7 +148,7 @@
           a{
               color: $green-dark;
             }
-            background: none;
+            background: white;
           }
         }
 
