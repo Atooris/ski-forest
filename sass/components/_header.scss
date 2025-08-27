@@ -18,17 +18,32 @@
     justify-content: space-between;
   }
 
-  .logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: $green-dark; // ciemny kolor logo
-    text-decoration: none;
-    transition: color 0.3s;
+  .logo {
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+    gap: 0.5rem;
 
-    &:hover {
-      color: $green; // zielony przy hover
+    a {
+      display: flex;
+      align-items: center;   
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $green-dark;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $green;
+      }
     }
-  }
+
+    img {
+      max-height: 70px;
+      object-fit: contain;
+    }
+}
+
 
   .btn-wrapper{
     display: none;
@@ -146,12 +161,16 @@
     border: none;
     cursor: pointer;
     transition: color 0.3s;
-
-    &:hover {
-    }
   }
 
   
+
+
+  @media(max-width: 970px){
+    .container .logo a{
+      display: none;
+    }
+  }
 
   // RESPONSYWNOŚĆ
   @media(max-width: 890px){
