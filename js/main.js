@@ -39,7 +39,7 @@
 
     const swiper = new Swiper('.swiper', {
       slidesPerView: 3,        // 3 kolumny
-      slidesPerGroup: 3,       // przewijanie o 3 zdjęcia
+      slidesPerGroup: 3,       // przewijanie o 3 zdjęciad
       spaceBetween: 10,
       loop: false,
       navigation: {
