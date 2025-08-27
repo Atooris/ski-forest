@@ -1,0 +1,4 @@
+wp:
+    - dodać możliwosć wyboru 2 edytory/1edytor+button dla sekcji contact-box
+    - zrobić funkcje renderTitleWrapper jak na cus
+    - możliwość wyboru rozmiaru bannera

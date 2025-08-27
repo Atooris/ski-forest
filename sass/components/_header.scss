@@ -40,10 +40,11 @@
         align-items: center;        
         gap: 10px;            
         border-radius: 20px;
+        font-size: 12px;
         svg {
             display: block;
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
             flex-shrink: 0;          
         }
     }
@@ -238,6 +239,19 @@
 
     .toggle {
       display: block;
+    }
+  }
+
+  @media(max-width: 450px){
+    .btn-wrapper{
+      .btn{
+        padding: 10px;
+        @media(max-width: 400px){
+          svg{
+            display: none;
+          }
+        }
+      }
     }
   }
 }

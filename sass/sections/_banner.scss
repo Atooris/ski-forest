@@ -4,6 +4,10 @@
   height: 500px; // pełna wysokość ekranu
   overflow: hidden;
 
+  &.small{
+    height: 250px;
+  }
+
   .bg {
     position: absolute;
     top: 0;
@@ -53,7 +57,7 @@
       h1 {
         font-size: 2.5rem;
         font-weight: bold;
-        margin-bottom: 1rem;
+        margin-bottom: 5px;
         line-height: 1.2;
       }
 
