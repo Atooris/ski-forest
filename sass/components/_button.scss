@@ -10,7 +10,7 @@
         transition: background 0.3s ease;
 
         &:hover {
-          background: rgbaify($green, 0.8);
+          background: $green-light;
         }
 
         &.phone {
@@ -27,6 +27,22 @@
             &:hover {
             background-color: rgbaify($beige, 0.8);
             }
+        }
+
+        &.circle{
+          padding: 5px;
+          font-size: 12px;
+          border-radius: 50%;
+          display: inline-flex;       
+          align-items: center; 
+          gap: 2px;   
+
+          svg {
+            display: block;
+            width: 25px;
+            height: 25px;
+            flex-shrink: 0;  
+          }  
         }
       }
     }

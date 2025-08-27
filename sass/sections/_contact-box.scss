@@ -1,0 +1,73 @@
+.contact-box {
+  padding: 2rem 1rem;
+
+  .container small{
+    margin: 0 auto;
+
+  }
+
+  .contact-wrapper {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    .editor-wrapper {
+      flex: 1;
+
+      h3 {
+        font-size: 1.8rem;
+        color: $green-light;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #333;
+        margin: 10px 0px;
+      }
+    }
+
+    .btn-wrapper{
+        margin-left: 50px;
+        .btn{
+            display: inline-flex;       
+            align-items: center;        
+            gap: 10px;            
+            border-radius: 20px;
+            padding: 25px;
+            svg {
+                display: block;
+                width: 20px;
+                height: 20px;
+                flex-shrink: 0;          
+            }
+        }
+    }
+
+
+  }
+
+  // RESPONSYWNOŚĆ
+  @media (max-width: 768px) {
+    .contact-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .btn-wrapper {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+
+        .btn {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
