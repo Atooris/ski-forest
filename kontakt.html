@@ -92,6 +92,7 @@
     </div>
   </section> 
   <section class="map">
+    <div class="container">
     <div class="map-wrapper">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5161.820526580604!2d18.914149456429023!3d49.69366267740445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471418b7d153539f%3A0x20722e71c268012!2sWie%C5%BCa%20Widokowa%20na%20hali%20pod%20Starym%20Groniem!5e0!3m2!1spl!2spl!4v1756299442875!5m2!1spl!2spl" 
@@ -101,7 +102,56 @@
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
+    </div>
   </section>
+
+<section class="contact-form-section">
+  <div class="container">
+    
+    <form class="contact-form" method="post">
+      <div class="title-wrapper">
+        <h3 style="color:#31572c">Formularz kontaktowy</h3>
+      </div>
+        <div class="form-row">
+            <label for="scf_name">Imię:</label>
+            <input type="text" id="scf_name" name="scf_name" value="" required>
+        </div>
+        <div class="form-row">
+            <label for="scf_location">Lokalizacja:</label>
+            <input type="text" id="scf_location" name="scf_location" value="" required>
+        </div>
+        <div class="form-row">
+        <div class="form-row-two">
+          <div class="field-half">
+            <label for="scf_phone">Telefon:</label>
+            <input type="text" id="scf_phone" name="scf_phone">
+            <div class="error-placeholder" data-error-for="scf_phone"></div>
+          </div>
+          <div class="field-half">
+            <label for="scf_email">Email:</label>
+            <input type="email" id="scf_email" name="scf_email">
+            <div class="error-placeholder" data-error-for="scf_email"></div>
+          </div>
+        </div>
+        </div>
+
+        <div class="form-row">
+            <label for="scf_message">Wiadomość:</label>
+            <textarea id="scf_message" name="scf_message" rows="5" required></textarea>
+        </div>
+        <div class="form-row rodo-wrapper">
+            <input type="checkbox" id="scf_rodo" name="scf_rodo" value="1" required>
+            <label for="scf_rodo">Wyrażam zgodę na przetwarzanie danych osobowych (RODO)</label>
+        </div>
+        <div class="form-row">
+            <input type="submit" name="scf_submit" value="Wyślij">
+        </div>
+    </form>
+  </div>
+</section>
+
+
+
   
 </main>
 <footer>

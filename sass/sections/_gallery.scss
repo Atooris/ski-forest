@@ -8,6 +8,8 @@
     position: relative;
   }
 
+  
+
   .swiper {
     padding: 2rem 0;
 
@@ -84,4 +86,24 @@
 
     }
   }
+}
+
+.sl-overlay {
+  background-color: black !important; /* czarne tło z przezroczystością */
+}
+
+/* Lewa i prawa strzałka */
+.sl-prev,
+.sl-next {
+  color: #fff !important;          /* dla ikon wbudowanych jako tekst */
+  border-color: #fff !important;   /* jeśli są tworzone jako trójkąty z borderów */
+}
+
+/* Zamknięcie (X) */
+.sl-close {
+  color: #fff !important;
+}
+
+.sl-counter {
+  color: #fff !important;
 }

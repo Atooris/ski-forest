@@ -82,7 +82,9 @@
     // Lightbox
     const lightbox = new SimpleLightbox('.swiper-slide a', {
       captions: false,
-      close: true
+      close: true,
+      overlay: true, // włącz overlay
+      overlayOpacity: 0.9, // stopień przyciemnienia (0-1)
     });
 
   });

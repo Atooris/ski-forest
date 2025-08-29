@@ -1,4 +1,5 @@
 wp:
     - dodać możliwosć wyboru 2 edytory/1edytor+button dla sekcji contact-box
-    - zrobić funkcje renderTitleWrapper jak na cus
-    - możliwość wyboru rozmiaru bannera
+    - dla contact boxu zmienic w container .small max-wdith na 700 i usunac padding + sprawdzic czy przy 2 edytorach to dziala git
+
+    poprawić klikanie pól hamburgera na mobile
